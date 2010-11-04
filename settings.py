@@ -15,7 +15,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'loghouse',
         'USER': 'postgres',
-        'PASSWORD': 'klon777san',
+        'PASSWORD': 'password',
         'HOST': '',
         'PORT': '',
     }
