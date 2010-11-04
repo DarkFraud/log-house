@@ -25,6 +25,9 @@ class Project(models.Model):
     area = models.CharField(max_length = 150, verbose_name = 'Площадь')
     short_content = models.TextField(verbose_name = 'Краткий контент')
     content = models.TextField(verbose_name = 'Полный контент')
+    meta_title = models.CharField(max_length = 400, verbose_name = 'Title')
+    meta_description = models.CharField(max_length = 400, verbose_name = 'Keywords')
+    meta_keywords = models.CharField(max_length = 400, verbose_name = 'Description')
     
     class Meta:
         verbose_name_plural = 'Проекты'

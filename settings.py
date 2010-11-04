@@ -33,10 +33,8 @@ MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'static')
 MEDIA_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/media/'
 
-# Make this unique, and don't share it with anybody.
 SECRET_KEY = '9k55nsov=!sh=+kj5ls$v33p*o79#jd__cw&8j26uuz6f4wru)'
 
-# List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
@@ -78,4 +76,5 @@ INSTALLED_APPS = (
     'loghouse.menu',
     'loghouse.pages',
     'loghouse.project',
+    'loghouse.news',
 )

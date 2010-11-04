@@ -2,17 +2,15 @@
 from django.contrib import admin
 from loghouse.project.models import Score, Category, Project
 
-class ScoreAdmin(admin.ModelAdmin):
-    list_display = ('reply',)
-    
-admin.site.register(Score, ScoreAdmin)
-
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('title',)
-    
-admin.site.register(Category, CategoryAdmin)
+admin.site.register(Score)
+admin.site.register(Category)
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('title',)
-    
+    fieldsets = (
+        ('Продукт', {
+            'classes': ['wide', 'extrapretty'],
+            'fields': ('category', 'title', 'area', 'short_content', 'content', 'score',)
+        }),
+        ('Meta данные', {'fields': ['meta_title', 'meta_description', 'meta_keywords',], 'classes': ['collapse']}),
+    )
 admin.site.register(Project, ProjectAdmin)

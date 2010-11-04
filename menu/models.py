@@ -12,6 +12,7 @@ class Category(models.Model):
         return self.title
 
 class Menu(models.Model):
+    category = models.ForeignKey(Category, verbose_name = 'Категория')
     parent = models.ForeignKey('self', blank = True, null = True, verbose_name = 'Родитель')
     title = models.CharField(max_length = 150, verbose_name = 'Название')
     url = models.CharField(max_length = 400, verbose_name = 'URL адрес')
