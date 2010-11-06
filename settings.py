@@ -77,4 +77,5 @@ INSTALLED_APPS = (
     'loghouse.pages',
     'loghouse.project',
     'loghouse.news',
+    'loghouse.phote',
 )

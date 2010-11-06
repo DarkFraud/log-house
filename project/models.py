@@ -7,6 +7,9 @@ class Score(models.Model):
     class Meta:
         verbose_name_plural = 'Оценки'
         verbose_name = 'Оценка'
+    
+    def __str__(self):
+        return self.reply
 
 class Category(models.Model):
     title = models.CharField(max_length = 150, verbose_name = 'Категория')
